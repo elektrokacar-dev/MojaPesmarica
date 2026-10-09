@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=yes">
+  <meta name="theme-color" content="#152744">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Moja Pesmarica">
+  <meta name="description" content="Moja Pesmarica – Studio Kačar. Tekstovi, liste za nastupe i režim nastupa, dostupni i bez interneta.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="./icons/icon-180.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Moja Pesmarica | Studio Kačar</title>
+</head>
+<body>
+<div id="app">
+  <header class="app-header">
+    <div class="brand-mark" aria-hidden="true">♫</div>
+    <div class="brand-text"><strong>MOJA PESMARICA</strong><small>Studio Kačar · <span id="licenseTag">DEMO</span></small></div>
+    <button id="menuBtn" class="icon-btn" aria-label="Otvori opcije" aria-haspopup="true" aria-expanded="false">⋮</button>
+  </header>
+  <div id="menu" class="dropdown hidden" role="menu">
+    <button data-menu="settings">⚙ &nbsp; Podešavanja</button>
+    <button data-menu="tools">⚙ &nbsp; Uvoz i alati</button>
+    <button data-menu="backup">↓ &nbsp; Napravi rezervnu kopiju</button>
+    <button data-menu="restore">↑ &nbsp; Vrati rezervnu kopiju</button>
+    <button data-menu="activate">♢ &nbsp; Aktiviraj FULL</button>
+    <button data-menu="about">ⓘ &nbsp; O aplikaciji</button>
+  </div>
+
+  <main id="main" class="main"></main>
+  <nav class="bottom-nav" aria-label="Glavna navigacija">
+    <button class="tab" data-tab="songs">▤<span>Moje pesme</span></button>
+    <button class="tab" data-tab="internet">⌕<span>Internet</span></button>
+    <button class="tab" data-tab="lists">☷<span>Moje liste</span></button>
+  </nav>
+</div>
+<div id="overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Uređivanje"></div>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<input id="fileInput" class="hidden" type="file" accept=".json,application/json,.txt,text/plain,.pdf,application/pdf">
+<script src="./app.js" defer></script>
+</body>
+</html>
